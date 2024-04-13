@@ -1,0 +1,51 @@
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+}
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+p,
+button,
+input,
+span,
+ol {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+li {
+    list-style: none;
+}
+a {
+    display: flex;
+    color: #04211F;
+    text-decoration: none;
+    transition: all .2s ease;
+    font-family: 'AtypDisplay-Semibold';
+}
+button,
+input,
+select,
+textarea {
+    border: none;
+    outline: none;
+    background: none;
+    font-family: 'AtypDisplay-Medium';
+}
+button {
+    cursor: pointer;
+}

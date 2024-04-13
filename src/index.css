@@ -1,0 +1,176 @@
+@import url('./global.css');
+
+@font-face {
+    font-family: 'AtypDisplay-Bold';
+    src: url(../public/fonts/AtypDisplay/AtypDisplay-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'AtypDisplay-Medium';
+    src: url(../public/fonts/AtypDisplay/AtypDisplay-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'AtypDisplay-Regular';
+    src: url(../public/fonts/AtypDisplay/AtypDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'AtypDisplay-Semibold';
+    src: url(../public/fonts/AtypDisplay/AtypDisplay-Semibold.ttf);
+}
+
+@font-face {
+    font-family: 'DrulWideTrial-Medium';
+    src: url(../public/fonts/DrukWideTrial/DrukWideMediumTrial.otf);
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1237px;
+}
+
+.cases-container {
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.case {
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    padding: 90px 0;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+.case-background {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+}
+
+.case-one .case-background {
+    background: #3185DB;
+}
+
+.case-to .case-background {
+    background: #684026;
+}
+
+.case-three .case-background {
+    background: #798F7C;
+}
+
+.case-fo .case-background {
+    background: #1B4242;
+}
+
+.case-five .case-background {
+    background: #005898;
+}
+
+.case-sixs .case-background{
+    background: #24A174;
+}
+
+.case-inner {
+    gap: 0 44px;
+    display: flex;
+    align-items: baseline;
+}
+
+.case-num {
+    width: 62px;
+    color: #fff;
+    font-size: 26px;
+    font-family: 'DrulWideTrial-Medium';
+}
+
+.case-title {
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'DrulWideTrial-Medium';
+}
+
+.case-banner {
+    width: 816px;
+    margin-top: 40px;
+}
+
+.case-banner img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.case-link {
+    gap: 8px;
+    display: flex;
+    font-size: 18px;
+    color: #ECFB5C;
+    margin-top: 26px;
+    margin-left: auto;
+    width: fit-content;
+    text-transform: uppercase;
+    font-family: 'DrulWideTrial-Medium';
+}
+
+.brands {
+    background: #E6EFEF;
+    padding: 71px 0 139px 0;
+}
+
+.brands-title {
+    color: #012921;
+    font-size: 60px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid #012921;
+    font-family: 'DrulWideTrial-Medium';
+}
+
+.brands-list {
+    gap: 10px;
+    display: flex;
+    margin-top: 129px;
+}
+
+.brand-item {
+    width: 400px;
+    background: #DBE9E8;
+    border: 1px solid #B3CCC7;
+    padding: 20px 20px 40px 40px;
+}
+
+.brand-year {
+    color: #848C8C;
+    margin-left: auto;
+    width: fit-content;
+    font-family: 'AtypDisplay-Regular';
+}
+
+.brand-top {
+    margin-top: 59px;
+}
+
+.brand-title {
+    font-size: 22px;
+    font-family: 'AtypDisplay-Bold';
+}
+
+.brand-description {
+    color: #6E807E;
+    margin-top: 8px;
+    font-family: 'AtypDisplay-Regular';
+}
