@@ -37,6 +37,10 @@
     overflow: hidden;
 }
 
+.cases-list {
+    height: 100%;
+}
+
 .case {
     top: 0;
     bottom: 0;
@@ -81,7 +85,7 @@
     background: #005898;
 }
 
-.case-sixs .case-background{
+.case-sixs .case-background {
     background: #24A174;
 }
 
@@ -128,6 +132,8 @@
 }
 
 .brands {
+    height: 100vh;
+    overflow: hidden;
     background: #E6EFEF;
     padding: 71px 0 139px 0;
 }
@@ -143,11 +149,14 @@
 .brands-list {
     gap: 10px;
     display: flex;
+    white-space: nowrap;
     margin-top: 129px;
+    word-spacing: -1em;
 }
 
 .brand-item {
     width: 400px;
+    flex-shrink: 0; 
     background: #DBE9E8;
     border: 1px solid #B3CCC7;
     padding: 20px 20px 40px 40px;

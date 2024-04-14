@@ -6,22 +6,23 @@ export default function HomePage() {
     useEffect(() => {
         const cases = gsap.utils.toArray('.case');
         cases.forEach((el, i) => {
-
-            gsap.fromTo(el, { clipPath: 'inset(100% 0% 0%)' }, {
-                scrollTrigger: {
-                    trigger: ".case-to",
-                    start: 'top top',
-                    end: el.offsetHight / 6,
-                    scrub: true,
-                    pin: true,
-                    markers: true,
-                    snap: {
-                        snapTo: "labels",
-                        delay: 1,
-                    }
-                },
-                clipPath: 'inset(0% 0% 0%)',
-            })
+     
+                gsap.fromTo(el, { clipPath: 'inset(100% 0% 0%)' }, {
+                    scrollTrigger: {
+                        trigger: ".cases-list",
+                        start: 'top top',
+                        end: el.offsetHeight,
+                        scrub: true,
+                        pin: true,
+                        markers: true,
+                        snap: {
+                            snapTo: "labels",
+                            delay: 1,
+                        }
+                    },
+                    clipPath: 'inset(0% 0% 0%)',
+                })
+            
         })
     }, [])
     return (

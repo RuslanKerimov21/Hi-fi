@@ -9,9 +9,8 @@ export default function HomePage() {
 
             gsap.fromTo(el, { clipPath: 'inset(100% 0% 0%)' }, {
                 scrollTrigger: {
-                    trigger: ".case-to",
+                    trigger: ".case-one",
                     start: 'top top',
-                    end: el.offsetHight / 6,
                     scrub: true,
                     pin: true,
                     markers: true,

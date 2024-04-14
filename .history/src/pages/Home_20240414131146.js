@@ -1,40 +1,33 @@
 import gsap from 'gsap';
 import React from 'react';
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useEffect, useRef } from "react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import { Cases } from '../components';
-gsap.registerPlugin(ScrollTrigger);
 export default function HomePage() {
-
-    const ref = useRef([]);
-    ref.current = [];
-
     useEffect(() => {
-        ref.current.forEach((el) => {
-            gsap.fromTo(el, { clipPath: `inset(100% 0% 0%)` }, {
+        const cases = gsap.utils.toArray('.case');
+        cases.forEach((el, i) => {
+
+            gsap.fromTo(el, { clipPath: 'inset(100% 0% 0%)' }, {
                 scrollTrigger: {
-                    trigger: "main",
+                    trigger: ".cases-list",
                     start: 'top top',
+                    end: '+=bottom 100px',
                     scrub: true,
                     pin: true,
                     markers: true,
-                    anticipatePin: ref.current.length,
+                    snap: {
+                        snapTo: "labels",
+                        delay: 1,
+                    }
                 },
-                clipPath: `inset(${0}% 0% 0%)`,
+                clipPath: 'inset(0% 0% 0%)',
             })
+
         })
-    }, [ref.current.length])
-
-    const setRef = (el) => {
-        if (el && !ref.current.includes(el)) {
-            ref.current.push(el);
-        }
-    }
-
+    }, [])
     return (
         <main className="main">
-            <section className="cases" style={{ height: `calc(${3}*130lvh)` }}>
+            <section className="cases" style={{ height: `calc(6*130lvh)` }}>
                 <div className="cases-container" style={{ position: 'sticky' }}>
                     <div className="cases-list">
                         <div className="case case-one">
@@ -59,7 +52,7 @@ export default function HomePage() {
                                 </div>
                             </div>
                         </div>
-                        <div className="case case-to" ref={setRef}>
+                        <div className="case case-to">
                             <div className="container">
                                 <div className="case-background"></div>
                                 <div className="case-inner">
@@ -81,7 +74,7 @@ export default function HomePage() {
                                 </div>
                             </div>
                         </div>
-                        <div className="case case-three" ref={setRef}>
+                        <div className="case case-three">
                             <div className="container">
                                 <div className="case-background"></div>
                                 <div className="case-inner">
@@ -103,7 +96,7 @@ export default function HomePage() {
                                 </div>
                             </div>
                         </div>
-                        <div className="case case-fo" ref={setRef}>
+                        <div className="case case-fo">
                             <div className="container">
                                 <div className="case-background"></div>
                                 <div className="case-inner">
@@ -125,7 +118,7 @@ export default function HomePage() {
                                 </div>
                             </div>
                         </div>
-                        <div className="case case-five" ref={setRef}>
+                        <div className="case case-five">
                             <div className="container">
                                 <div className="case-background"></div>
                                 <div className="case-inner">
@@ -147,7 +140,7 @@ export default function HomePage() {
                                 </div>
                             </div>
                         </div>
-                        <div className="case case-sixs" ref={setRef}>
+                        <div className="case case-sixs">
                             <div className="container">
                                 <div className="case-background"></div>
                                 <div className="case-inner">
@@ -177,7 +170,7 @@ export default function HomePage() {
                 <div className='container'>
                     <h2 className='brands-title'>Brands<br />I Worked With</h2>
                     <ul className="brands-list">
-                        <li className="brand-item">
+                        <li className="brand-item brand-one">
                             <div className="brand-year">2021</div>
                             <div className="brand-logo">
                                 <svg width="200" height="34" viewBox="0 0 200 34" fill="none" xmlns="http://www.w3.org/2000/svg">
