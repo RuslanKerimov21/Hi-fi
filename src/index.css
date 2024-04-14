@@ -54,6 +54,22 @@
     justify-content: center;
 }
 
+.case .container {
+    height: 40%;
+}
+
+.case-content {
+    display: flex;
+    text-align: center;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
 .case-background {
     top: 0;
     right: 0;
@@ -82,31 +98,27 @@
 }
 
 .case-five .case-background {
-    background: #005898;
-}
-
-.case-sixs .case-background {
     background: #24A174;
 }
 
-.case-inner {
-    gap: 0 44px;
-    display: flex;
-    align-items: baseline;
-}
-
-.case-num {
-    width: 62px;
-    color: #fff;
-    font-size: 26px;
-    font-family: 'DrulWideTrial-Medium';
+.case-sixs .case-background {
+    background: #005898;
 }
 
 .case-title {
-    font-size: 30px;
     color: #fff;
+    font-size: 44px;
     text-transform: uppercase;
     font-family: 'DrulWideTrial-Medium';
+}
+
+.case-description {
+    color: #fff;
+    font-size: 14px;
+    margin-top: 16px;
+    max-width: 404px;
+    line-height: 150%;
+    font-family: 'AtypDisplay-Regular';
 }
 
 .case-banner {
@@ -156,7 +168,7 @@
 
 .brand-item {
     width: 400px;
-    flex-shrink: 0; 
+    flex-shrink: 0;
     background: #DBE9E8;
     border: 1px solid #B3CCC7;
     padding: 20px 20px 40px 40px;

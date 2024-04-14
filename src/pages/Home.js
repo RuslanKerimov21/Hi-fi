@@ -1,52 +1,63 @@
-import gsap from 'gsap';
 import React from 'react';
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Cases } from '../components';
+import imgOne from '../case_image_1.png';
+import imgTo from '../case_image_2.png';
+import imgThree from '../case_image_3.png';
+import imgFo from '../case_image_4.png';
+import imgFive from '../case_image_5.png';
+import imgSixs from '../case_image_6.png';
 export default function HomePage() {
-    useEffect(() => {
-        const cases = gsap.utils.toArray('.case');
-        cases.forEach((el, i) => {
-
-            gsap.fromTo(el, { clipPath: 'inset(100% 0% 0%)' }, {
-                scrollTrigger: {
-                    trigger: ".case-to",
-                    start: 'top top',
-                    end: el.offsetHight / 6,
-                    scrub: true,
-                    pin: true,
-                    markers: true,
-                    snap: {
-                        snapTo: "labels",
-                        delay: 1,
-                    }
-                },
-                clipPath: 'inset(0% 0% 0%)',
-            })
-        })
-    }, [])
+    const items = [
+        {
+            title: 'Virtual cards',
+            descr: 'A fintech startup offering a SaaS virtual card system to streamline small business spending',
+            bg: 'case-one',
+            img: imgOne,
+        },
+        {
+            title: 'Online store',
+            descr: 'Retailer of premium leather accessories looking to enhance its online presence with an advanced e-commerce platform.',
+            bg: 'case-to',
+            img: imgTo,
+        },
+        {
+            title: 'Saas platform',
+            descr: 'Fintech startup dedicated to revolutionizing spending management for small businesses with virtual card system.',
+            bg: 'case-three',
+            img: imgThree,
+        },
+        {
+            title: 'Blog platform',
+            descr: 'Consulting firm improving digital content accessibility and engagement on its platform.',
+            bg: 'case-fo',
+            img: imgFo,
+        },
+        {
+            title: 'Medical research',
+            descr: 'Medical research organization boosting its online presence to increase community engagement.',
+            bg: 'case-five',
+            img: imgFive,
+        },
+        {
+            title: 'Investment platform',
+            descr: 'Innovative startup providing a platform for easy access to pre-seed investments with educational tools',
+            bg: 'case-sixs',
+            img: imgSixs,
+        },
+    ]
     return (
         <main className="main">
-            <section className="cases" style={{ height: `calc(6*130lvh)` }}>
+            <section className="cases" style={{ height: `100vh` }}>
                 <div className="cases-container" style={{ position: 'sticky' }}>
-                    <div className="cases-list">
+                    {/* <div className="cases-list">
                         <div className="case case-one">
                             <div className="container">
                                 <div className="case-background"></div>
-                                <div className="case-inner">
-                                    <div className="case-num">01.</div>
-                                    <div className="case-content">
-                                        <h1 className="case-title">Service for <br /> virtual cards</h1>
-                                        <div className="case-banner">
-                                            <img src={require('../case_image_1.png')} alt="case-image" />
-                                        </div>
-                                        <Link className="case-link" to={`path`}>
-                                            See more
-                                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M5.8293 18.7109L7.0293 19.9109L19.0293 7.91085L17.8293 6.71085L5.8293 18.7109Z" fill="#ECFB5C" />
-                                                <path d="M17.3936 6.63606V19.364H19.0906V6.63606H17.3936Z" fill="#ECFB5C" />
-                                                <path d="M6.36328 6.63958V8.33664H19.0912V6.63958H6.36328Z" fill="#ECFB5C" />
-                                            </svg>
-                                        </Link>
+                                <div className="case-content">
+                                    <h1 className="case-title">Virtual cards</h1>
+                                    <p className="case-description">A fintech startup offering a SaaS virtual card system to streamline small business spending</p>
+                                    <div className="case-banner">
+                                        <img src={require('../case_image_1.png')} alt="case-image" />
                                     </div>
                                 </div>
                             </div>
@@ -54,21 +65,11 @@ export default function HomePage() {
                         <div className="case case-to">
                             <div className="container">
                                 <div className="case-background"></div>
-                                <div className="case-inner">
-                                    <div className="case-num">02.</div>
-                                    <div className="case-content">
-                                        <h1 className="case-title">Online <br /> store </h1>
-                                        <div className="case-banner">
-                                            <img src={require('../case_image_2.png')} alt="case-image" />
-                                        </div>
-                                        <Link className="case-link" to={`path`}>
-                                            See more
-                                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M5.8293 18.7109L7.0293 19.9109L19.0293 7.91085L17.8293 6.71085L5.8293 18.7109Z" fill="#ECFB5C" />
-                                                <path d="M17.3936 6.63606V19.364H19.0906V6.63606H17.3936Z" fill="#ECFB5C" />
-                                                <path d="M6.36328 6.63958V8.33664H19.0912V6.63958H6.36328Z" fill="#ECFB5C" />
-                                            </svg>
-                                        </Link>
+                                <div className="case-content">
+                                    <h1 className="case-title">Online store </h1>
+                                    <p className="case-description">Retailer of premium leather accessories looking to enhance its online presence with an advanced e-commerce platform.</p>
+                                    <div className="case-banner">
+                                        <img src={require('../case_image_2.png')} alt="case-image" />
                                     </div>
                                 </div>
                             </div>
@@ -76,21 +77,11 @@ export default function HomePage() {
                         <div className="case case-three">
                             <div className="container">
                                 <div className="case-background"></div>
-                                <div className="case-inner">
-                                    <div className="case-num">03.</div>
-                                    <div className="case-content">
-                                        <h1 className="case-title">Saas platform <br /> for e-commerce </h1>
-                                        <div className="case-banner">
-                                            <img src={require('../case_image_3.png')} alt="case-image" />
-                                        </div>
-                                        <Link className="case-link" to={`path`}>
-                                            See more
-                                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M5.8293 18.7109L7.0293 19.9109L19.0293 7.91085L17.8293 6.71085L5.8293 18.7109Z" fill="#ECFB5C" />
-                                                <path d="M17.3936 6.63606V19.364H19.0906V6.63606H17.3936Z" fill="#ECFB5C" />
-                                                <path d="M6.36328 6.63958V8.33664H19.0912V6.63958H6.36328Z" fill="#ECFB5C" />
-                                            </svg>
-                                        </Link>
+                                <div className="case-content">
+                                    <h1 className="case-title">Saas platform </h1>
+                                    <p className="case-description">Fintech startup dedicated to revolutionizing spending management for small businesses with virtual card system.</p>
+                                    <div className="case-banner">
+                                        <img src={require('../case_image_3.png')} alt="case-image" />
                                     </div>
                                 </div>
                             </div>
@@ -98,21 +89,11 @@ export default function HomePage() {
                         <div className="case case-fo">
                             <div className="container">
                                 <div className="case-background"></div>
-                                <div className="case-inner">
-                                    <div className="case-num">04.</div>
-                                    <div className="case-content">
-                                        <h1 className="case-title">Blog for <br /> consulting company </h1>
-                                        <div className="case-banner">
-                                            <img src={require('../case_image_4.png')} alt="case-image" />
-                                        </div>
-                                        <Link className="case-link" to={`path`}>
-                                            See more
-                                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M5.8293 18.7109L7.0293 19.9109L19.0293 7.91085L17.8293 6.71085L5.8293 18.7109Z" fill="#ECFB5C" />
-                                                <path d="M17.3936 6.63606V19.364H19.0906V6.63606H17.3936Z" fill="#ECFB5C" />
-                                                <path d="M6.36328 6.63958V8.33664H19.0912V6.63958H6.36328Z" fill="#ECFB5C" />
-                                            </svg>
-                                        </Link>
+                                <div className="case-content">
+                                    <h1 className="case-title">Blog platform </h1>
+                                    <p className="case-description">Consulting firm improving digital content accessibility and engagement on its platform.</p>
+                                    <div className="case-banner">
+                                        <img src={require('../case_image_4.png')} alt="case-image" />
                                     </div>
                                 </div>
                             </div>
@@ -120,21 +101,10 @@ export default function HomePage() {
                         <div className="case case-five">
                             <div className="container">
                                 <div className="case-background"></div>
-                                <div className="case-inner">
-                                    <div className="case-num">05.</div>
-                                    <div className="case-content">
-                                        <h1 className="case-title">Investment <br /> platform </h1>
-                                        <div className="case-banner">
-                                            <img src={require('../case_image_5.png')} alt="case-image" />
-                                        </div>
-                                        <Link className="case-link" to={`path`}>
-                                            See more
-                                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M5.8293 18.7109L7.0293 19.9109L19.0293 7.91085L17.8293 6.71085L5.8293 18.7109Z" fill="#ECFB5C" />
-                                                <path d="M17.3936 6.63606V19.364H19.0906V6.63606H17.3936Z" fill="#ECFB5C" />
-                                                <path d="M6.36328 6.63958V8.33664H19.0912V6.63958H6.36328Z" fill="#ECFB5C" />
-                                            </svg>
-                                        </Link>
+                                <div className="case-content">
+                                    <h1 className="case-title">Investment <br /> platform </h1>
+                                    <div className="case-banner">
+                                        <img src={require('../case_image_5.png')} alt="case-image" />
                                     </div>
                                 </div>
                             </div>
@@ -142,28 +112,18 @@ export default function HomePage() {
                         <div className="case case-sixs">
                             <div className="container">
                                 <div className="case-background"></div>
-                                <div className="case-inner">
-                                    <div className="case-num">06.</div>
-                                    <div className="case-content">
-                                        <h1 className="case-title">Medical research <br /> website </h1>
-                                        <div className="case-banner">
-                                            <img src={require('../case_image_6.png')} alt="case-image" />
-                                        </div>
-                                        <Link className="case-link" to={`path`}>
-                                            See more
-                                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M5.8293 18.7109L7.0293 19.9109L19.0293 7.91085L17.8293 6.71085L5.8293 18.7109Z" fill="#ECFB5C" />
-                                                <path d="M17.3936 6.63606V19.364H19.0906V6.63606H17.3936Z" fill="#ECFB5C" />
-                                                <path d="M6.36328 6.63958V8.33664H19.0912V6.63958H6.36328Z" fill="#ECFB5C" />
-                                            </svg>
-                                        </Link>
+                                <div className="case-content">
+                                    <h1 className="case-title">Medical research </h1>
+                                    <p className="case-description">Medical research organization boosting its online presence to increase community engagement.</p>
+                                    <div className="case-banner">
+                                        <img src={require('../case_image_6.png')} alt="case-image" />
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
+                    <Cases data={items} />
                 </div>
-                {/* <Cases data={items}/> */}
             </section>
             <section className='brands'>
                 <div className='container'>
