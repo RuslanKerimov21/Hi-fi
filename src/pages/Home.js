@@ -1,4 +1,4 @@
-import React from 'react';
+import { useRef } from 'react';
 import { Cases } from '../components';
 import imgOne from '../case_image_1.png';
 import imgTo from '../case_image_2.png';
@@ -11,117 +11,45 @@ export default function HomePage() {
         {
             title: 'Virtual cards',
             descr: 'A fintech startup offering a SaaS virtual card system to streamline small business spending',
-            bg: 'case-one',
+            bg: '#3185DB',
             img: imgOne,
         },
         {
             title: 'Online store',
             descr: 'Retailer of premium leather accessories looking to enhance its online presence with an advanced e-commerce platform.',
-            bg: 'case-to',
+            bg: '#684026',
             img: imgTo,
         },
         {
             title: 'Saas platform',
             descr: 'Fintech startup dedicated to revolutionizing spending management for small businesses with virtual card system.',
-            bg: 'case-three',
+            bg: '#798F7C',
             img: imgThree,
         },
         {
             title: 'Blog platform',
             descr: 'Consulting firm improving digital content accessibility and engagement on its platform.',
-            bg: 'case-fo',
+            bg: '#1B4242',
             img: imgFo,
         },
         {
             title: 'Medical research',
             descr: 'Medical research organization boosting its online presence to increase community engagement.',
-            bg: 'case-five',
+            bg: '#24A174',
             img: imgFive,
         },
         {
             title: 'Investment platform',
             descr: 'Innovative startup providing a platform for easy access to pre-seed investments with educational tools',
-            bg: 'case-sixs',
+            bg: '#005898',
             img: imgSixs,
         },
     ]
     return (
         <main className="main">
-            <section className="cases" style={{ height: `100vh` }}>
-                <div className="cases-container" style={{ position: 'sticky' }}>
-                    {/* <div className="cases-list">
-                        <div className="case case-one">
-                            <div className="container">
-                                <div className="case-background"></div>
-                                <div className="case-content">
-                                    <h1 className="case-title">Virtual cards</h1>
-                                    <p className="case-description">A fintech startup offering a SaaS virtual card system to streamline small business spending</p>
-                                    <div className="case-banner">
-                                        <img src={require('../case_image_1.png')} alt="case-image" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="case case-to">
-                            <div className="container">
-                                <div className="case-background"></div>
-                                <div className="case-content">
-                                    <h1 className="case-title">Online store </h1>
-                                    <p className="case-description">Retailer of premium leather accessories looking to enhance its online presence with an advanced e-commerce platform.</p>
-                                    <div className="case-banner">
-                                        <img src={require('../case_image_2.png')} alt="case-image" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="case case-three">
-                            <div className="container">
-                                <div className="case-background"></div>
-                                <div className="case-content">
-                                    <h1 className="case-title">Saas platform </h1>
-                                    <p className="case-description">Fintech startup dedicated to revolutionizing spending management for small businesses with virtual card system.</p>
-                                    <div className="case-banner">
-                                        <img src={require('../case_image_3.png')} alt="case-image" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="case case-fo">
-                            <div className="container">
-                                <div className="case-background"></div>
-                                <div className="case-content">
-                                    <h1 className="case-title">Blog platform </h1>
-                                    <p className="case-description">Consulting firm improving digital content accessibility and engagement on its platform.</p>
-                                    <div className="case-banner">
-                                        <img src={require('../case_image_4.png')} alt="case-image" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="case case-five">
-                            <div className="container">
-                                <div className="case-background"></div>
-                                <div className="case-content">
-                                    <h1 className="case-title">Investment <br /> platform </h1>
-                                    <div className="case-banner">
-                                        <img src={require('../case_image_5.png')} alt="case-image" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="case case-sixs">
-                            <div className="container">
-                                <div className="case-background"></div>
-                                <div className="case-content">
-                                    <h1 className="case-title">Medical research </h1>
-                                    <p className="case-description">Medical research organization boosting its online presence to increase community engagement.</p>
-                                    <div className="case-banner">
-                                        <img src={require('../case_image_6.png')} alt="case-image" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> */}
+            <section className="spacer">ss</section>
+            <section className="cases">
+                <div className="cases-container">
                     <Cases data={items} />
                 </div>
             </section>

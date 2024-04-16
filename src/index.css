@@ -31,31 +31,40 @@
     max-width: 1237px;
 }
 
-.cases-container {
-    top: 0;
-    height: 100vh;
-    overflow: hidden;
+.spacer {
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #fff;
+    background: #012921;
+    font-family: 'DrulWideTrial-Medium';
 }
 
-.cases-list {
-    height: 100%;
+.cases {
+    width: 100%;
+    z-index: 20;
+    position: relative;
+    /* height: calc(3*130lvh); */
+}
+
+.cases-container {
+    /* height: 100vh; */
+    /* overflow: auto;
+    position: sticky; */
 }
 
 .case {
-    top: 0;
-    bottom: 0;
-    z-index: 1;
-    width: 100%;
-    height: 100vh;
+    align-items: flex-end;
     display: flex;
-    padding: 90px 0;
-    position: absolute;
-    align-items: center;
+    height: 100vh;
     justify-content: center;
-}
-
-.case .container {
-    height: 40%;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
 
 .case-content {
@@ -64,10 +73,6 @@
     position: relative;
     align-items: center;
     flex-direction: column;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
 }
 
 .case-background {
@@ -81,31 +86,8 @@
     position: absolute;
 }
 
-.case-one .case-background {
-    background: #3185DB;
-}
-
-.case-to .case-background {
-    background: #684026;
-}
-
-.case-three .case-background {
-    background: #798F7C;
-}
-
-.case-fo .case-background {
-    background: #1B4242;
-}
-
-.case-five .case-background {
-    background: #24A174;
-}
-
-.case-sixs .case-background {
-    background: #005898;
-}
-
 .case-title {
+    z-index: 1;
     color: #fff;
     font-size: 44px;
     text-transform: uppercase;
@@ -113,6 +95,7 @@
 }
 
 .case-description {
+    z-index: 1;
     color: #fff;
     font-size: 14px;
     margin-top: 16px;
