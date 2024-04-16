@@ -1,12 +1,14 @@
 import { useRef } from 'react';
-import { Cases } from '../components';
 import imgOne from '../case_image_1.png';
 import imgTo from '../case_image_2.png';
 import imgThree from '../case_image_3.png';
 import imgFo from '../case_image_4.png';
 import imgFive from '../case_image_5.png';
 import imgSixs from '../case_image_6.png';
+import { Brands, Cases } from '../components';
+import { Gillette, Kenwood } from '../components/Icons';
 export default function HomePage() {
+    const hint = useRef();
     const items = [
         {
             title: 'Virtual cards',
@@ -45,6 +47,64 @@ export default function HomePage() {
             img: imgSixs,
         },
     ]
+
+    const brands = [
+        {
+            title: 'Kenwood',
+            descr: 'Сonsumer electronics',
+            year: '2021',
+            brand: <Kenwood />,
+        },
+        {
+            title: 'Gillette',
+            descr: 'Shaving Products',
+            year: '2020',
+            brand: <Gillette />,
+        },
+        {
+            title: 'Nutribullet',
+            descr: 'Kitchen Appliances',
+            year: '2021',
+            brand: <Kenwood />,
+        },
+        {
+            title: 'Rowenta',
+            descr: 'Household Appliances',
+            year: '2021',
+            brand: <Kenwood />,
+        },
+        {
+            title: 'Delonghi',
+            descr: 'Kitchen Appliances',
+            year: '2020',
+            brand: <Kenwood />,
+        },
+        {
+            title: 'Pampers',
+            descr: 'Baby Care products',
+            year: '2022',
+            brand: <Kenwood />,
+        },
+        {
+            title: 'Protiviti',
+            descr: 'Consulting company',
+            year: '2023',
+            brand: <Kenwood />,
+        },
+        {
+            title: 'Nautilus',
+            descr: 'Biotechnology company',
+            year: '2023',
+            brand: <Kenwood />,
+        },
+        {
+            title: 'WOWMAX',
+            descr: 'DEX aggregator',
+            year: '2024',
+            brand: <Kenwood />,
+        },
+    ]
+
     return (
         <main className="main">
             <section className="spacer">ss</section>
@@ -54,9 +114,10 @@ export default function HomePage() {
                 </div>
             </section>
             <section className='brands'>
-                <div className='container'>
+                <div className='container' ref={hint}>
                     <h2 className='brands-title'>Brands<br />I Worked With</h2>
-                    <ul className="brands-list">
+                    <Brands data={brands} />
+                    {/* <ul className="brands-list">
                         <li className="brand-item brand-one">
                             <div className="brand-year">2021</div>
                             <div className="brand-logo">
@@ -163,7 +224,7 @@ export default function HomePage() {
                                 <div className="brand-description">Household Appliances</div>
                             </div>
                         </li>
-                    </ul>
+                    </ul> */}
                 </div>
             </section>
         </main>

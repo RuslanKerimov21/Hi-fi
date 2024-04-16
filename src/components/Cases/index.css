@@ -1,0 +1,57 @@
+.case {
+    align-items: flex-end;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.case-content {
+    display: flex;
+    text-align: center;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+}
+
+.case-background {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+}
+
+.case-title {
+    z-index: 1;
+    color: #fff;
+    font-size: 44px;
+    text-transform: uppercase;
+    font-family: 'DrulWideTrial-Medium';
+}
+
+.case-description {
+    z-index: 1;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 16px;
+    max-width: 404px;
+    line-height: 150%;
+    font-family: 'AtypDisplay-Regular';
+}
+
+.case-banner {
+    width: 816px;
+    margin-top: 40px;
+}
+
+.case-banner img {
+    width: 100%;
+    object-fit: cover;
+}

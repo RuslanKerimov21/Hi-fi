@@ -50,84 +50,8 @@
     /* height: calc(3*130lvh); */
 }
 
-.cases-container {
-    /* height: 100vh; */
-    /* overflow: auto;
-    position: sticky; */
-}
-
-.case {
-    align-items: flex-end;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-}
-
-.case-content {
-    display: flex;
-    text-align: center;
-    position: relative;
-    align-items: center;
-    flex-direction: column;
-}
-
-.case-background {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: -1;
-    height: 100%;
-    margin: auto;
-    position: absolute;
-}
-
-.case-title {
-    z-index: 1;
-    color: #fff;
-    font-size: 44px;
-    text-transform: uppercase;
-    font-family: 'DrulWideTrial-Medium';
-}
-
-.case-description {
-    z-index: 1;
-    color: #fff;
-    font-size: 14px;
-    margin-top: 16px;
-    max-width: 404px;
-    line-height: 150%;
-    font-family: 'AtypDisplay-Regular';
-}
-
-.case-banner {
-    width: 816px;
-    margin-top: 40px;
-}
-
-.case-banner img {
-    width: 100%;
-    object-fit: cover;
-}
-
-.case-link {
-    gap: 8px;
-    display: flex;
-    font-size: 18px;
-    color: #ECFB5C;
-    margin-top: 26px;
-    margin-left: auto;
-    width: fit-content;
-    text-transform: uppercase;
-    font-family: 'DrulWideTrial-Medium';
-}
-
 .brands {
-    height: 100vh;
+    /* height: 100vh; */
     overflow: hidden;
     background: #E6EFEF;
     padding: 71px 0 139px 0;
@@ -139,42 +63,4 @@
     padding-bottom: 56px;
     border-bottom: 1px solid #012921;
     font-family: 'DrulWideTrial-Medium';
-}
-
-.brands-list {
-    gap: 10px;
-    display: flex;
-    white-space: nowrap;
-    margin-top: 129px;
-    word-spacing: -1em;
-}
-
-.brand-item {
-    width: 400px;
-    flex-shrink: 0;
-    background: #DBE9E8;
-    border: 1px solid #B3CCC7;
-    padding: 20px 20px 40px 40px;
-}
-
-.brand-year {
-    color: #848C8C;
-    margin-left: auto;
-    width: fit-content;
-    font-family: 'AtypDisplay-Regular';
-}
-
-.brand-top {
-    margin-top: 59px;
-}
-
-.brand-title {
-    font-size: 22px;
-    font-family: 'AtypDisplay-Bold';
-}
-
-.brand-description {
-    color: #6E807E;
-    margin-top: 8px;
-    font-family: 'AtypDisplay-Regular';
 }

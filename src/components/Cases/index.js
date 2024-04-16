@@ -1,3 +1,4 @@
+import './index.css';
 import gsap from 'gsap';
 import { useEffect } from "react";
 import { ScrollTrigger } from 'gsap/all';
@@ -26,7 +27,7 @@ export default function Cases({ data }) {
                 transform: 'translate3d(0px, 0px, 0px) scale(1)'
             })
         })
-    }, [])
+    }, [data])
     return (
         <div className="cases-list">
             {data.map((el, i) => (
