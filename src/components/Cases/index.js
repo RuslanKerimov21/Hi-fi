@@ -5,27 +5,29 @@ import { ScrollTrigger } from 'gsap/all';
 export default function Cases({ data }) {
     gsap.registerPlugin(ScrollTrigger);
     useEffect(() => {
-        const cases = gsap.utils.toArray('.case:not(:first-child)');
-        const caseCover = gsap.utils.toArray('.case-banner:not(:first-child)');
-        cases.forEach((el) => {
-            gsap.fromTo(el, { clipPath: 'inset(100% 0% 0%)' }, {
-                scrollTrigger: {
-                    trigger: el,
-                    start: "top top",
-                    end: el.clientHight,
-                    scrub: 1,
-                },
-                clipPath: 'inset(0% 0% 0%)',
-            })
-        })
-        caseCover.forEach((el) => {
-            gsap.fromTo(el, { transform: 'translate3d(0px, 0px, 0px)' }, {
-                scrollTrigger: {
-                    trigger: el,
-                    scrub: 1,
-                },
-                transform: 'translate3d(0px, 0px, 0px) scale(1)'
-            })
+        const cases = gsap.utils.toArray('.case');
+        const caseCover = gsap.utils.toArray('.case-banner');
+        cases.forEach((el, i) => {
+            if (i != 0) {
+                gsap.fromTo(el, { clipPath: 'inset(100% 0% 0%)' }, {
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top top",
+                        end: el.clientHight,
+                        scrub: 1,
+                    },
+                    clipPath: 'inset(0% 0% 0%)',
+                });
+                gsap.fromTo(caseCover[i], { clipPath: 'inset(100% 25% 0%)' }, {
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top top",
+                        end: el.clientHight,
+                        scrub: 1,
+                    },
+                    clipPath: 'inset(0% 0% 0%)',
+                })
+            }
         })
     }, [data])
     return (
@@ -38,7 +40,9 @@ export default function Cases({ data }) {
                             <h1 className="case-title">{el.title}</h1>
                             <p className="case-description">{el.descr}</p>
                             <div className="case-banner">
-                                <img src={el.img} alt="case-image" />
+                                <div className="case-img">
+                                    <img src={el.img} alt="case-image" />
+                                </div>
                             </div>
                         </div>
                     </div>

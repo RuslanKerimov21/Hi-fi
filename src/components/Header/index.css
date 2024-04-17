@@ -1,0 +1,43 @@
+.header {
+    top: 44px;
+    right: 0;
+    z-index: 1;
+    position: absolute;
+    margin-left: auto;
+}
+
+.header-right {
+    gap: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.header-location {
+    gap: 10px;
+    display: flex;
+    color: #fff;
+    font-size: 14px;
+    align-items: center;
+    font-family: 'AtypDisplay-Regular';
+}
+
+.header-location_text {
+    padding-right: 10px;
+    border-right: 1px solid #485F5E;
+}
+
+.header-buttons{
+    gap: 16px;
+    display: flex;
+}
+
+.available {
+    gap: 11px;
+    display: flex;
+    color: #fff;
+    font-size: 14px;
+    align-items: center;
+    padding: 14px 17px;
+    border: 1px solid #1C3725;
+    font-family: 'AtypDisplay-Medium';
+}

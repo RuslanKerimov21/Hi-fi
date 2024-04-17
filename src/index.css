@@ -31,27 +31,101 @@
     max-width: 1237px;
 }
 
-.spacer {
-    height: 90vh;
+.offer {
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: #04211F;
+    position: sticky;
+}
+
+.intro {
+    top: 0;
     width: 100vw;
+    height: 100vh;
     display: flex;
-    justify-content: center;
+    position: sticky;
     align-items: center;
-    font-size: 40px;
-    color: #fff;
-    background: #012921;
-    font-family: 'DrulWideTrial-Medium';
+    background: #F8F8F8;
+    justify-content: center;
+}
+
+.intro-inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.intro-tag {
+    font-size: 18px;
+    color: #003D32;
+    font-family: 'AtypDisplay-Semibold';
+}
+
+.intro-info {
+    font-size: 44px;
+    margin-top: 54px;
+    max-width: 765px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    background-size: 100%;
+    background: #AEC0BD;
+    background-clip: text;
+    text-transform: uppercase;
+    background-repeat: no-repeat;
+    font-family: 'AtypDisplay-Semibold';
+}
+
+.intro-info p {
+    max-width: 100%;
+}
+
+.text-first {
+    color: #000;
+    position: absolute;
+}
+
+.text-child {
+    color: #AEC0BD;
+}
+
+.intro-button {
+    gap: 32px;
+    z-index: 1;
+    display: flex;
+    margin-top: 100px;
+    overflow: hidden;
+    color: #04211F;
+    position: relative;
+    width: fit-content;
+    align-items: center;
+    background: #F9F9F9;
+    transition: all .2s ease;
+    padding: 12px 12px 12px 28px;
+    border: 1px solid #7C8B89;
+    text-transform: uppercase;
+    font-family: 'AtypDisplay-Semibold';
+}
+
+.button-intro_arrow {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    background: #003D32;
+    justify-content: center;
 }
 
 .cases {
     width: 100%;
     z-index: 20;
     position: relative;
-    /* height: calc(3*130lvh); */
 }
 
 .brands {
-    /* height: 100vh; */
     overflow: hidden;
     background: #E6EFEF;
     padding: 71px 0 139px 0;

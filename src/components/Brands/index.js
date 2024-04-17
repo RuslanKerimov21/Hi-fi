@@ -3,21 +3,11 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { useEffect, useRef } from "react";
 gsap.registerPlugin(ScrollTrigger);
-export default function Brands({ data, logo }) {
+export default function Brands({ data }) {
     let hint = useRef();
     let track = useRef();
     useEffect(() => {
-        let transform = track.current.offsetWidth - hint.current.offsetWidth;
-        gsap.to('.brands-inner', {
-            scrollTrigger: {
-                trigger: '.brands',
-                start: 'top top',
-                markers: true,
-                end: () => '+=' + track.current.offsetWidth,
-                scrub: 1,
-            },
-            x: '-=' + transform + 'px'
-        })
+
     }, [])
 
     return (
