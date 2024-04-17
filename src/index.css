@@ -142,3 +142,19 @@
     border-bottom: 1px solid #012921;
     font-family: 'DrulWideTrial-Medium';
 }
+
+@media(max-width: 900px) {
+    .intro-info {
+        margin-top: 80px;
+        font-size: 32px;
+    }
+
+    .intro-button {
+        margin-top: 80px;
+    }
+
+    .brands-title {
+        font-size: 32px;
+        padding-bottom: 24px;
+    }
+}

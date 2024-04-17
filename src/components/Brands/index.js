@@ -20,7 +20,7 @@ export default function Brands({ data }) {
                             {el.brand}
                         </div>
                         <div className="brand-top">
-                            <div className="brand-title">{el.title}</div>
+                            <div className="brand-item_title">{el.title}</div>
                             <div className="brand-description">{el.descr}</div>
                         </div>
                     </li>

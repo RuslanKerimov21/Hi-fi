@@ -15,6 +15,7 @@ export default function Cases({ data }) {
                         start: "top top",
                         end: el.clientHight,
                         scrub: 1,
+                        snap: 'labels'
                     },
                     clipPath: 'inset(0% 0% 0%)',
                 });

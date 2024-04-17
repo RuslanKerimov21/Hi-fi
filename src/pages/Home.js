@@ -125,7 +125,7 @@ export default function HomePage() {
                 transform: 'translate3d(0px, 0px, 0px)',
             })
         })
-    }, [])
+    }, [string])
     return (
         <main className="main">
             <section className="offer">

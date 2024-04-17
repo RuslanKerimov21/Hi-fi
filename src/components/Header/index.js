@@ -1,5 +1,6 @@
 import './index.css';
 import { ReactComponent as Sun } from '../../assets/icons/Sun.svg';
+import { ReactComponent as Arrow } from '../../assets/icons/Arrow.svg';
 import { ReactComponent as Available } from '../../assets/icons/Available.svg';
 export default function Header() {
     return (
@@ -16,6 +17,10 @@ export default function Header() {
                             <button className='available'>
                                 <Available />
                                 Available
+                            </button>
+                            <button className="lets-talk">
+                                Let’s talk
+                                <Arrow />
                             </button>
                         </div>
                     </div>

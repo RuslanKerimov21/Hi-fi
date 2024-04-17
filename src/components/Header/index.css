@@ -4,6 +4,7 @@
     z-index: 1;
     position: absolute;
     margin-left: auto;
+    max-width: 1237px;
 }
 
 .header-right {
@@ -44,4 +45,53 @@
     padding: 14px 17px;
     border: 1px solid #1C3725;
     font-family: 'AtypDisplay-Medium';
+}
+
+.lets-talk {
+    gap: 7px;
+    color: #fff;
+    display: flex;
+    font-size: 14px;
+    padding: 14px 17px;
+    align-items: center;
+    position: relative;
+    transition: all .2s ease;
+    border: 1px solid #1C3725;
+}
+
+.lets-talk::before {
+    left: 0;
+    content: '';
+    width: 2px;
+    z-index: -1;
+    height: 100%;
+    position: absolute;
+    background: #ECFB5C;
+    transition: width 0.5s ease;
+
+}
+
+.lets-talk:hover {
+    color: #1C3725;
+}
+
+.lets-talk:hover::before {
+    width: 100%;
+}
+
+.lets-talk svg {
+    transition: all .5s ease;
+}
+
+.lets-talk svg * {
+    fill: #ECFB5C;
+    transition: all .5s ease;
+}
+
+.lets-talk:hover svg {
+    transform: rotate(45deg);
+}
+
+.lets-talk:hover svg * {
+    fill: #1C3725;
 }
