@@ -119,6 +119,10 @@
     justify-content: center;
 }
 
+.button-intro_arrow svg * {
+    fill: #ECFB5C;
+}
+
 .cases {
     width: 100%;
     z-index: 20;

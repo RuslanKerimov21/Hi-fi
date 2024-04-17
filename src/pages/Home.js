@@ -1,12 +1,14 @@
 import gsap from 'gsap';
 import { useEffect } from 'react';
 import { Brands, Cases } from '../components';
-import imgOne from '../assets/image/case_image_1.png';
-import imgTo from '../assets/image/case_image_2.png';
-import imgThree from '../assets/image/case_image_3.png';
+import { RenderText } from '../utils/text.compose';
 import imgFo from '../assets/image/case_image_4.png';
+import imgTo from '../assets/image/case_image_2.png';
+import imgOne from '../assets/image/case_image_1.png';
 import imgFive from '../assets/image/case_image_5.png';
 import imgSixs from '../assets/image/case_image_6.png';
+import imgThree from '../assets/image/case_image_3.png';
+import { ReactComponent as Arrow } from '../assets/icons/Arrow.svg';
 import { ReactComponent as Kenwood } from '../assets/icons/Kenwood.svg';
 import { ReactComponent as Pampers } from '../assets/icons/Pampers.svg';
 import { ReactComponent as Gillette } from '../assets/icons/Gillette.svg';
@@ -136,13 +138,13 @@ export default function HomePage() {
                     <div className="intro-inner">
                         <div className="intro-tag">[Intro]</div>
                         <div className="intro-info">
-                            <p className='text-first'>{string.split('').map((el, i) => (<span className='letter' key={i}>{el}</span>))}</p>
-                            <p className='text-child'>{string.split('').map((el, i) => (<span className='letter' key={i}>{el}</span>))}</p>
+                            <p className="text-first">{RenderText(string)}</p>
+                            <p className='text-child'>{RenderText(string)}</p>
                         </div>
                         <button className='intro-button'>
                             Learn more
                             <div className="button-intro_arrow">
-                                <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.47917 20.4782L7.8125 21.8115L21.1458 8.47819L19.8125 7.14485L6.47917 20.4782Z" fill="#F9F9F9"></path><path d="M19.3271 7.07076V21.2129H21.2128V7.07076H19.3271Z" fill="#F9F9F9"></path><path d="M7.07129 7.07288V8.9585H21.2134V7.07288H7.07129Z" fill="#F9F9F9"></path></svg>
+                                <Arrow />
                             </div>
                         </button>
                     </div>

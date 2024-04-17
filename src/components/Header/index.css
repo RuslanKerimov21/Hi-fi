@@ -26,7 +26,11 @@
     border-right: 1px solid #485F5E;
 }
 
-.header-buttons{
+.header-location svg * {
+    fill: #04211F;
+}
+
+.header-buttons {
     gap: 16px;
     display: flex;
 }
