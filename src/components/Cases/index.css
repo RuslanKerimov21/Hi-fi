@@ -34,7 +34,10 @@
     text-transform: uppercase;
     font-family: 'DrulWideTrial-Medium';
     /* font-size: 44px; */
-    font-size: calc(24px + 13* (100vw / 1280));
+    font-size: 60px;
+    /* font-size: clamp(24px, 44px, 60px);
+    font-size: clamp(24px, 44px, 60px); */
+    /* font-size: calc(24px + 13* (100vw / 1280)); */
 }
 
 .case-description {
@@ -48,8 +51,8 @@
 }
 
 .case-banner {
-    width: 54vw;
-    height: 60vh;
+    height: 59vh;
+    min-width: 52vw;
     margin-top: 56px;
 }
 
@@ -67,6 +70,18 @@
     transition: opacity .3s cubic-bezier(.455, .03, .515, .955);
 }
 
+@media(max-width: 1728px) {
+    .case-title {
+        font-size: 55px;
+    }
+}
+
+@media(max-width: 1440px) {
+    .case-title {
+        font-size: 44px;
+    }
+}
+
 @media(max-width: 1058px) {
     .case {
         align-items: center;
@@ -79,9 +94,9 @@
 }
 
 @media(max-width: 800px) {
-    /* .case-title {
+    .case-title {
         font-size: 24px;
-    } */
+    }
 
     .case-banner {
         margin-top: 40px;

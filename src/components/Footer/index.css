@@ -64,7 +64,6 @@
 .button-project {
     color: #fff;
     text-transform: uppercase;
-    /* background: #F9F9F9; */
     width: fit-content;
     padding: 12px;
     align-items: center;
@@ -114,6 +113,20 @@
     justify-content: center;
 }
 
+.button-project_arrow svg {
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    transform: translate(0, 0);
+    /* transition: all .5s ease; */
+    /* transform: translate(29px, -27px);  */
+}
+
+.button-project_arrow svg * {
+    fill: #04211F;
+}
+
 .button-project_arrow::before {
     left: 0;
     z-index: 1;
@@ -135,20 +148,34 @@
     transition: transform .5s cubic-bezier(.165, .84, .44, 1)
 }
 
+@keyframes arrowletter {
+    0% {
+        transform: translate(-22px, 24px);
+    }
+
+    50% {
+        transform: translate(29px, -27px);
+    }
+
+    70% {
+        opacity: 0;
+        transform: translate(-6px, 10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0 0);
+    }
+}
+
+.button-project:hover svg {
+    animation: arrowletter .7s ease-out;
+}
+
 .button-project:hover .button-project_arrow svg * {
     fill: #ECFB5C;
 }
 
-.button-project_arrow svg {
-    z-index: 1;
-    width: 20px;
-    height: 20px;
-    transition: fill .3s cubic-bezier(.165, .84, .44, 1) .2s
-}
-
-.button-project_arrow svg * {
-    fill: #04211F;
-}
 
 .footer-menu_list {
     gap: 16px;
