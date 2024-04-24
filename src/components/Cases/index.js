@@ -39,7 +39,7 @@ export default function Cases({ data }) {
                 }
             })
         }
-    }, [banner])
+    }, [data])
     return (
         <div className="cases-list">
             {data.map((el, i) => (
@@ -62,7 +62,7 @@ export default function Cases({ data }) {
                                 </div>
                                 : null
                             }
-                            <Link className='more' path={`cases/${el.slug}`}>
+                            <Link className='more' to={`/cases/${el.slug}`}>
                                 See more
                                 <Arrow />
                             </Link>
