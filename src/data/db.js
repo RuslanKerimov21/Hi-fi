@@ -1,3 +1,4 @@
+import caseBgOne from '../assets/image/case_bg_1.png';
 import imgFo from '../assets/image/case_image_4.png';
 import imgTo from '../assets/image/case_image_2.png';
 import imgOne from '../assets/image/case_image_1.png';
@@ -19,36 +20,42 @@ export const cases = [
         descr: 'A fintech startup offering a SaaS virtual card system to streamline small business spending',
         bg: '#3185DB',
         img: imgOne,
+        case_bg: caseBgOne,
     },
     {
         title: 'Online store',
         descr: 'Retailer of premium leather accessories looking to enhance its online presence with an advanced e-commerce platform.',
         bg: '#684026',
         img: imgTo,
+        case_bg: caseBgOne,
     },
     {
         title: 'Saas platform',
         descr: 'Fintech startup dedicated to revolutionizing spending management for small businesses with virtual card system.',
         bg: '#798F7C',
         img: imgThree,
+        case_bg: caseBgOne,
     },
     {
         title: 'Blog platform',
         descr: 'Consulting firm improving digital content accessibility and engagement on its platform.',
         bg: '#1B4242',
         img: imgFo,
+        case_bg: caseBgOne,
     },
     {
         title: 'Medical research',
         descr: 'Medical research organization boosting its online presence to increase community engagement.',
         bg: '#24A174',
         img: imgFive,
+        case_bg: caseBgOne,
     },
     {
         title: 'Investment platform',
         descr: 'Innovative startup providing a platform for easy access to pre-seed investments with educational tools',
         bg: '#005898',
         img: imgSixs,
+        case_bg: caseBgOne,
     },
 ]
 export const brands = [

@@ -13,13 +13,24 @@
 }
 
 .paralax-item:first-child {
-    top: 299px;
     left: 0;
+    top: -379px;
+
 }
 
 .paralax-item:nth-child(3) {
     right: -19px;
-    top: 474px;
+    top: -623px;
+}
+
+.paralax-item:nth-child(4) {
+    left: 0;
+    top: 300px;
+}
+
+.paralax-item:nth-child(5) {
+    top: 447px;
+    right: -19px;
 }
 
 .paralax-item img {

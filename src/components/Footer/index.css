@@ -119,8 +119,6 @@
     height: 20px;
     position: absolute;
     transform: translate(0, 0);
-    /* transition: all .5s ease; */
-    /* transform: translate(29px, -27px);  */
 }
 
 .button-project_arrow svg * {
@@ -169,7 +167,7 @@
 }
 
 .button-project:hover svg {
-    animation: arrowletter .7s ease-out;
+    animation: arrowletter .8s ease-in;
 }
 
 .button-project:hover .button-project_arrow svg * {
@@ -222,6 +220,7 @@
 
 .read-cv_right {
     gap: 32px;
+    width: 165px;
     padding: 10px 13px;
 }
 
@@ -330,6 +329,9 @@
         width: 39vw;
         margin-top: 0;
         margin-left: auto;
+    }
+    .read-cv_right{
+        width: fit-content;
     }
 }
 
